@@ -22,6 +22,10 @@ const TodoItem: FC<{
 }> = ({ todo, editTodo }) => {
   const [expanded, setExpanded] = useState(false);
 
+  const onDone = () => {
+    editTodo(todo.id, { ...todo, done: !todo.done });
+  };
+
   return (
     <Card>
       <CardContent>
@@ -31,7 +35,7 @@ const TodoItem: FC<{
               icon={<RadioButtonUncheckedIcon />}
               checkedIcon={<CheckCircleIcon />}
               checked={todo.done}
-              onClick={() => editTodo(todo.id, { ...todo, done: !todo.done })}
+              onClick={() => onDone()}
             />
             <Typography variant='h5' sx={{ textDecoration: todo.done ? 'line-through' : '' }}>
               {todo.title}

@@ -68,7 +68,7 @@ const App: FC<{ darkMode: boolean; setDarkMode: (v: boolean) => void }> = ({
             left: '50%',
             transform: 'translate(-50%, 0%)'
           }}>
-          <TodoInput addTodo={addTodo} />
+          <TodoInput addTodo={addTodo} close={() => setOpenAddTodo(false)} />
         </Container>
       </Modal>
     </Container>

@@ -6,7 +6,8 @@ import TagInput from './TagInput';
 
 const TodoInput: FC<{
   addTodo: (todo: Todo) => void;
-}> = ({ addTodo }) => {
+  close: () => void;
+}> = ({ addTodo, close }) => {
   const [title, setTitle] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [tags, setTags] = useState<string[]>([]);
@@ -27,6 +28,7 @@ const TodoInput: FC<{
       done: false
     });
     resetInput();
+    close();
   };
 
   return (
