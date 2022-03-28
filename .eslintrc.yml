@@ -20,6 +20,7 @@ rules:
     import/extensions: [error, ignorePackages, { js: never, jsx: never, ts: never, tsx: never }],
     no-shadow: 'off',
     no-unused-vars: 'off',
+    no-param-reassign: 'off',
     react/jsx-filename-extension: 'off',
     react/jsx-uses-react: 'off',
     react/react-in-jsx-scope: 'off',
